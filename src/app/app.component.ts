@@ -3,8 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-//import { AssignedAuditsPage } from '../pages/assignedAudits/assignedAudits';
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -13,6 +11,7 @@ export class MyApp {
 
   rootPage: string = 'HomePage';
 
+
   pages: Array<{title: string, component: string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -20,8 +19,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: 'HomePage' },
-      //{ title: 'Assigned Audits', component: AssignedAuditsPage }
+      { title: 'Home', component: 'DashboardPage' },
+      { title: 'Assigned Audits', component: 'AssignedAuditsPage' },
+      { title: 'Logout', component: 'AssignedAuditsPage' }
     ];
 
   }

@@ -6,10 +6,18 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>assignedAudits</ion-title>
+    <ion-title>List Assigned Audits</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    
+      <ion-list>
+          <button ion-item *ngFor="let item of items" (click)="action(item)">
+            <h2> Empresa: {{ item.empresa }} </h2>
+            <h2> Fecha Inicio: {{ item.fechaIni }} </h2>
+            <h2> Hora Inicio: {{ item.horaIni }} </h2>
+          </button>
+        </ion-list>
 
 </ion-content>

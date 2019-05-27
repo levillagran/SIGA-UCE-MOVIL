@@ -1,0 +1,41 @@
+<!--
+  Generated template for the QuestionFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Questions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 class="text-center">¿La línea a auditar pudo ser evidenciado para contratos y/o facturas?</h2>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>YES</ion-label>
+        <ion-radio slot="end" value="biff"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>NO</ion-label>
+        <ion-radio slot="end" value="griff"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+
+  <button ion-button block (click)="getPicture()">Take a photo</button>
+  <img [src]="image" *ngIf="image" />
+
+  <ion-item>
+    <ion-label position="floating">Evidence</ion-label>
+    <ion-textarea rows="6">
+        SE EVIDENCIO EL CONTRATO 2099</ion-textarea>
+  </ion-item>
+  <button ion-button block>Save</button>
+
+</ion-content>
